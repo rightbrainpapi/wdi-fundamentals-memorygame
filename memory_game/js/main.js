@@ -76,7 +76,67 @@ console.log("Up and running!");
 
 // Unit 3.2
 
-var cards = ["queen", "queen", "king", "king"]
+// var cards = ["queen", "queen", "king", "king"]
+// var cardsInPlay = [];
+
+// var checkForMatch = function (){
+// 	if (cardsInPlay[0] === cardsInPlay[1]) {
+// 	alert("You found a match!");
+// 	} else {
+// 	alert("Sorry, try again.");
+// 	}
+// }
+
+// var flipCard = function (cardId){
+
+// 	console.log("User flipped " + cards[cardId])
+// 	cardsInPlay.push(cards[cardId])
+
+// 	if (cardsInPlay.length === 2){
+// 		checkForMatch()
+// 	}
+	
+
+// }
+
+// flipCard(0)
+// flipCard(2)
+
+// End of 3.2
+
+var cards = [
+
+{
+	rank: "queen",
+	suit: "hearts",
+	cardId: "images/queen-of-hearts.png"
+
+},
+
+{
+	rank: "queen",
+	suit: "diamonds",
+	cardId: "images/queen-of-diamonds.png"
+
+},
+
+{
+	rank: "king",
+	suit: "hearts",	
+	cardId: "images/king-of-hearts.png"
+
+},
+
+{
+	rank: "king",	
+	suit: "diamonds",		
+	cardId: "images/king-of-diamonds.png"
+
+}
+
+
+];
+
 var cardsInPlay = [];
 
 var checkForMatch = function (){
@@ -89,8 +149,11 @@ var checkForMatch = function (){
 
 var flipCard = function (cardId){
 
-	console.log("User flipped " + cards[cardId])
-	cardsInPlay.push(cards[cardId])
+	console.log("User flipped " + cards[cardId].rank);
+	cardsInPlay.push(cards[cardId].rank);
+
+	console.log(cards[cardId].cardId)
+	console.log(cards[cardId].suit)
 
 	if (cardsInPlay.length === 2){
 		checkForMatch()
@@ -101,4 +164,13 @@ var flipCard = function (cardId){
 
 flipCard(0)
 flipCard(2)
+
+	
+	// console.log(cards[cardId].cardImage)
+	// console.log(cards[cardId].suit)
+
+
+
+
+
 
